@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(88, 88, 88);
+    background-image: linear-gradient(rgba(113, 207, 230, 0.621), rgba(154, 211, 255, 0.682), rgba(198, 155, 198, 0.664), rgba(247, 84, 152, 0.664));
+
+}
+
+.container {
+    height: 667px;
+    width: 375px;
+    border-radius: 10px;
+    /* animation: mixture 10s  infinite; */
+    background-image: linear-gradient(rgb(113, 206, 230), rgb(154, 211, 255), rgb(198, 155, 198), rgb(247, 84, 152));
+
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    justify-content: space-between;
+    filter: invert();
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 280px;
+    margin-top: 15px;
+    /* border: 3px solid khaki; */
+}
+
+.pica {
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.718), 3px 11px 20px rgba(0, 0, 0, 0.405);
+    border-radius: 50%;
+}
+
+.pol {
+    height: 310px;
+    width: 310px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-image: url(pics/gramafone-disk.jpg);
+    background-size: cover;
+}
+
+.song {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 15px 0;
+    filter: invert();
+
+}
+
+.artist {
+    width: 100%;
+    text-align: center;
+    filter: invert();
+
+}
+
+.seekbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 0;
+}
+
+.seekbar input {
+    width: 320px;
+    /* opacity: .8; */
+    accent-color: white;
+    height: 10px;
+}
+
+.timer {
+    width: 100%;
+    padding: 0 35px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    font-size: .9rem;
+    filter: invert();
+
+}
+
+.player {
+    display: flex;
+    position: relative;
+    bottom: -80px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    bottom: -25px;
+    font-size: 1.2rem;
+    filter: invert();
+}
+
+.pl {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.6rem;
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.718), -3px -3px 20px rgba(0, 0, 0, 0.405);
+}
+
+.album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    /* border: 2px solid gold; */
+    z-index: 2;
+    transition: all ease-in-out 2s;
+}
+
+.album ul {
+    height: 250px;
+    width: 95%;
+    border: 4px solid rgba(7, 6, 0, 0.421);
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, rgb(183, 235, 246), rgb(249, 147, 249));
+    position: relative;
+    top: 60px;
+    transition: all ease-in-out .3s;
+    box-shadow: 3px -3px 20px rgba(0, 0, 0, 0.405);
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    scrollbar-width: none;
+
+}
+
+.cut {
+    filter: invert();
+
+}
+
+/* @media (max-width=375) {
+    .container{
+        width: 100vw;
+        height: 100vh;
+    }
+} */
+
+.album ul li {
+    list-style: none;
+    /* height: 60px; */
+    width: 97%;
+    margin: 5px;
+    border-radius: 7px;
+    padding: 20px;
+    color: rgb(53, 58, 59);
+    font-weight: 600;
+    border: 2px solid rgb(119, 111, 102);
+    box-shadow: 2px 2px 22px rgb(191, 143, 143);
+    background-image: linear-gradient(90deg, rgb(205, 152, 236), rgb(84, 229, 152));
+}
+
+.tr:active {
+    color: rgb(44, 226, 44);
+}
+
+/* g{background-image: url();} */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .pic.spin {
+    animation: spin 4s linear infinite;
+  }
+  
